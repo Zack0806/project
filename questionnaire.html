@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Questionnaire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="questionnaire-container">
+        <h1>AI Questionnaire</h1>
+        <form action="thank-you.html" method="GET">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="helpful">How has AI been helpful to you?</label>
+                <textarea id="helpful" name="helpful" required></textarea>
+            </div>
+            <div class="input-group">
+                <label>Should AI be banned?</label>
+                <select name="ban" required>
+                    <option value="">Select...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="concerns">What are your main concerns about AI?</label>
+                <textarea id="concerns" name="concerns" required></textarea>
+            </div>
+            <div class="input-group">
+                <label for="future">What do you think the future of AI holds?</label>
+                <textarea id="future" name="future" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

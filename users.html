@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Logins</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="users-container">
+        <h1>User Logins</h1>
+        <ul id="user-list"></ul>
+        <button onclick="window.location.href='index.html'">Back to Login</button>
+    </div>
+
+    <script>
+        const username = localStorage.getItem('username');
+        const password = localStorage.getItem('password');
+
+        const userList = document.getElementById('user-list');
+        if (username && password) {
+            const listItem = document.createElement('li');
+            listItem.textContent = `Username: ${username}, Password: ${password}`;
+            userList.appendChild(listItem);
+        } else {
+            userList.textContent = 'No users logged in.';
+        }
+    </script>
+</body>
+</html>
